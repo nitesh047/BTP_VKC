@@ -1,7 +1,7 @@
 // import 'react-native-gesture-handler';
 import { StatusBar } from "expo-status-bar";
 
-import { Header } from 'react-native-elements';
+import { Header } from "react-native-elements";
 import {
   StyleSheet,
   Text,
@@ -9,7 +9,6 @@ import {
   TextInput,
   SafeAreaView,
   Pressable,
-
 } from "react-native";
 import Input from "./Components/Input";
 
@@ -19,17 +18,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import DataPage from "./Components/DataPage";
 import Home from "./Components/Home";
 import About from "./Components/About";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Footer from "./Components/Footer";
 import SingleData from "./Components/SingleData";
 import Survey from "./Components/Survey";
 import Geographical from "./Components/questionForm/Geographical";
 import Cultural from "./Components/questionForm/Cultural";
 import Other from "./Components/questionForm/Other";
-// import Drawer from "./Components/Drawer";
-
-
-
+import Drawer from "./Components/Drawer";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -37,72 +33,33 @@ export default function App() {
   return (
     <NavigationContainer>
       <SafeAreaView style={styles.container}>
-
         {/* <Drawer /> */}
-        <Header
-          style={{ marginTop: '20px', }}
+        {/* <Header
+          style={{ marginTop: "20px" }}
           backgroundColor="#dff8f8"
-          statusBarProps={{ barStyle: 'light-content' }}
+          statusBarProps={{ barStyle: "light-content" }}
           barStyle="light-content" // or directly
-          leftComponent={{ icon: 'menu', color: '#000' }}
-          centerComponent={{ text: 'Village Knowledge Center', style: { color: '#000', fontSize: 18 } }}
-        // rightComponent={{ icon: 'home', color: '#fff' }}
-        />
+          leftComponent={{ icon: "menu", color: "#000" }}
+          centerComponent={{
+            text: "Village Knowledge Center",
+            style: { color: "#000", fontSize: 18 },
+          }}
+          // rightComponent={{ icon: 'home', color: '#fff' }}
+        /> */}
         <Stack.Navigator>
           <Stack.Screen
             name="Home"
-            component={Home}
-            options={{ title: "Home", headerShown: false }}
-
+            component={Drawer}
+            options={{
+              title: "Village Knowledege Center",
+              headerShown: false,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+                elevation: 0,
+              },
+              // headerTitleAlign: "center",
+            }}
           />
-          <Stack.Screen
-            name="Survey"
-            component={Survey}
-            options={{ title: "Survey", headerShown: false }}
-
-          />
-          <Stack.Screen
-            name="Form"
-            component={Input}
-            options={{ title: "Form", headerShown: false }}
-
-          />
-          <Stack.Screen
-            name="Data"
-            options={{ title: "Form-Data", headerShown: false }}
-            component={DataPage}
-          />
-          <Stack.Screen
-            name="About"
-            options={{ title: "Form-Data", headerShown: false }}
-            component={About}
-          />
-          <Stack.Screen
-            name="Footer"
-            options={{ title: "Form-Data", headerShown: false }}
-            component={Footer}
-          />
-          <Stack.Screen
-            name="SingleData"
-            options={{ title: "Form-Data", headerShown: false }}
-            component={SingleData}
-          />
-          <Stack.Screen
-            name="Geographical"
-            options={{ title: "Form-Data", headerShown: false }}
-            component={Geographical}
-          />
-          <Stack.Screen
-            name="Cultural"
-            options={{ title: "Form-Data", headerShown: false }}
-            component={Cultural}
-          />
-          <Stack.Screen
-            name="Other"
-            options={{ title: "Form-Data", headerShown: false }}
-            component={Other}
-          />
-
         </Stack.Navigator>
 
         <StatusBar style="auto" />
@@ -116,7 +73,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#313131",
+    backgroundColor: "#dff8f8",
   },
   title: {
     fontSize: 28,
