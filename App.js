@@ -22,6 +22,10 @@ import About from "./Components/About";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Footer from "./Components/Footer";
 import SingleData from "./Components/SingleData";
+import Survey from "./Components/Survey";
+import Geographical from "./Components/questionForm/Geographical";
+import Cultural from "./Components/questionForm/Cultural";
+import Other from "./Components/questionForm/Other";
 // import Drawer from "./Components/Drawer";
 
 
@@ -52,6 +56,12 @@ export default function App() {
 
           />
           <Stack.Screen
+            name="Survey"
+            component={Survey}
+            options={{ title: "Survey", headerShown: false }}
+
+          />
+          <Stack.Screen
             name="Form"
             component={Input}
             options={{ title: "Form", headerShown: false }}
@@ -76,6 +86,21 @@ export default function App() {
             name="SingleData"
             options={{ title: "Form-Data", headerShown: false }}
             component={SingleData}
+          />
+          <Stack.Screen
+            name="Geographical"
+            options={{ title: "Form-Data", headerShown: false }}
+            component={Geographical}
+          />
+          <Stack.Screen
+            name="Cultural"
+            options={{ title: "Form-Data", headerShown: false }}
+            component={Cultural}
+          />
+          <Stack.Screen
+            name="Other"
+            options={{ title: "Form-Data", headerShown: false }}
+            component={Other}
           />
 
         </Stack.Navigator>

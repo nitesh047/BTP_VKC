@@ -30,7 +30,7 @@ const Home = ({ navigation }) => {
                 <Pressable
                     style={styles.button}
                     onPress={() => {
-                        navigation.navigate("Form");
+                        navigation.navigate("Survey");
                     }}
                 >
 

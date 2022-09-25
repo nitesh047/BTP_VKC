@@ -58,6 +58,7 @@ const Input = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <ScrollView>
+        <Text></Text>
         <View style={styles.label}>
           <Text>Name of the Village</Text>
         </View>
@@ -122,6 +123,20 @@ const Input = ({ navigation }) => {
           onChangeText={(text) => handleMultiInput(text, "Question5")}
         // value={lastName}
         />
+        <View style={styles.label}>
+          <Text>
+            How are you associated with them?
+          </Text>
+        </View>
+        <TextInput
+          multiline
+          name="5"
+          numberOfLines={3}
+          style={styles.inputMultiliner}
+          onChangeText={(text) => handleMultiInput(text, "Question5")}
+        // value={lastName}
+        />
+
 
         <Pressable
           style={styles.button}
