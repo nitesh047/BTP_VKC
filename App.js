@@ -48,7 +48,7 @@ export default function App() {
         /> */}
         <Stack.Navigator>
           <Stack.Screen
-            name="Home"
+            name="Homee"
             component={Drawer}
             options={{
               title: "Village Knowledege Center",
@@ -59,6 +59,97 @@ export default function App() {
               },
               // headerTitleAlign: "center",
             }}
+          />
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              title: "Village Knowledege Center",
+              headerShown: true,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+              },
+            }}
+          />
+          <Stack.Screen
+            name="Survey"
+            component={Survey}
+            options={{
+              title: "Survey", headerShown: true,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+              },
+            }}
+          />
+          <Stack.Screen
+            name="Form"
+            component={Input}
+            options={{
+              title: "Basic Questions", headerShown: true,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+              },
+            }}
+          />
+          <Stack.Screen
+            name="Data"
+            options={{
+              title: "Form-Data", headerShown: true,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+              },
+            }}
+            component={DataPage}
+          />
+          <Stack.Screen
+            name="Footer"
+            options={{
+              title: "Form-Data", headerShown: true,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+              },
+            }}
+            component={Footer}
+          />
+          <Stack.Screen
+            name="SingleData"
+            options={{
+              title: "Village-Data", headerShown: true,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+              },
+            }}
+            component={SingleData}
+          />
+          <Stack.Screen
+            name="Geographical"
+            options={{
+              title: "Geographical Questions", headerShown: true,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+              },
+            }}
+            component={Geographical}
+          />
+          <Stack.Screen
+            name="Cultural"
+            options={{
+              title: "Cultural Questions", headerShown: true,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+              },
+            }}
+            component={Cultural}
+          />
+          <Stack.Screen
+            name="Other"
+            options={{
+              title: "Form-Data", headerShown: true,
+              headerStyle: {
+                backgroundColor: "#dff8f8",
+              },
+            }}
+            component={Other}
           />
         </Stack.Navigator>
 

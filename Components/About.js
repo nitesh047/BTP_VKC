@@ -14,7 +14,7 @@ import { Text } from 'react-native-elements';
 const About = () => {
     return (
         <ScrollView>
-            <Text style={{ padding: 5 }} h4>About VKC</Text>
+            {/* <Text style={{ padding: 5 }} h4>About VKC</Text> */}
             <Text style={{ fontSize: 18, textAlign: 'justify', padding: 5 }} >Diverse cultural heritage and completely different social-economic structure is also the hallmark
                 of Indian villages. The traditional knowledge of the villagers may not be properly reached and
                 utilized by the villagers today. This is a time when information explosions are taking place, new
